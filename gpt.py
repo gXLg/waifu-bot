@@ -10,7 +10,7 @@ def chat(ms):
   return g4f.ChatCompletion.create(
     model = "gpt-3.5-turbo",
     messages = ms,
-    provider = g4f.Provider.Aichat,
+    provider = g4f.Provider.GetGpt,
   )
 
 def fit_msgs(ms):
