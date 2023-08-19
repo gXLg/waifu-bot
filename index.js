@@ -8,7 +8,7 @@
   const { spawn } = require("child_process");
   const { AsyncSet } = require("gxlg-asyncdb");
 
-  const ownerId = fs.rwadFileSync("ownerId.txt", "utf-8").trim();
+  const ownerId = fs.readFileSync("ownerId.txt", "utf-8").trim();
 
   const bot = new Bot(token, DEBUG);
   const botUser = await bot.user();
