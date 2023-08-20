@@ -25,7 +25,7 @@ def fit_msgs(ms):
     num += 3
     if num < 3600: break
     ms.pop(2)
-    ms.pop(3)
+    ms.pop(2)
 
 with open("waifuName.txt", "r") as file:
   name = file.read().strip()
