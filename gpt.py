@@ -10,7 +10,7 @@ def chat(ms):
   return g4f.ChatCompletion.create(
     model = "gpt-3.5-turbo",
     messages = ms,
-    provider = g4f.Provider.DeepAi,
+    provider = g4f.Provider.Opchatgpts,
   )
 
 def fit_msgs(ms):
@@ -25,6 +25,7 @@ def fit_msgs(ms):
     num += 3
     if num < 3600: break
     ms.pop(2)
+    ms.pop(3)
 
 with open("waifuName.txt", "r") as file:
   name = file.read().strip()
